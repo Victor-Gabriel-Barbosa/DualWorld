@@ -1,0 +1,14 @@
+{
+  "name": "dualworld",
+  "version": "1.0.0",
+  "description": "Um jogo de RPG de turnos entre civilizações mágicas e tecnológicas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

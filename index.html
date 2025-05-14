@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DualWorld - RPG de Turnos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">DualWorld</h1>
+        
+        <div id="main-menu" class="screen">
+            <h2>Bem-vindo ao confronto entre Magia e Tecnologia</h2>
+            <button id="start-game" class="btn">Iniciar Jogo</button>
+            <button id="how-to-play" class="btn">Como Jogar</button>
+        </div>
+
+        <div id="faction-select" class="screen hidden">
+            <h2>Escolha sua Civilização</h2>
+            <div class="factions">
+                <div class="faction" data-faction="magic">
+                    <h3>Civilização Mágica</h3>
+                    <div class="faction-image magic"></div>
+                    <p>Domine as forças arcanas e elementais para derrotar seus inimigos.</p>
+                    <button class="select-faction btn" data-faction="magic">Escolher Magia</button>
+                </div>
+                <div class="faction" data-faction="tech">
+                    <h3>Civilização Tecnológica</h3>
+                    <div class="faction-image tech"></div>
+                    <p>Use armas avançadas e gadgets para superar seus adversários.</p>
+                    <button class="select-faction btn" data-faction="tech">Escolher Tecnologia</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="battle-screen" class="screen hidden">
+            <div class="battle-header">
+                <div class="player-info">
+                    <h3 id="player-name">Jogador</h3>
+                    <div class="health-bar">
+                        <div id="player-health" class="health-fill"></div>
+                    </div>
+                    <p id="player-health-text">HP: 100/100</p>
+                </div>
+                <div class="turn-info">
+                    <p id="turn-counter">Turno: 1</p>
+                </div>
+                <div class="enemy-info">
+                    <h3 id="enemy-name">Inimigo</h3>
+                    <div class="health-bar">
+                        <div id="enemy-health" class="health-fill"></div>
+                    </div>
+                    <p id="enemy-health-text">HP: 100/100</p>
+                </div>
+            </div>
+
+            <div class="battle-area">
+                <div class="player-character"></div>
+                <div class="enemy-character"></div>
+            </div>
+
+            <div class="action-panel">
+                <h3>Ações</h3>
+                <div id="action-buttons">
+                    <!-- Botões de ação serão adicionados dinamicamente pelo JavaScript -->
+                </div>
+            </div>
+
+            <div id="battle-log">
+                <p>Batalha iniciada! Escolha sua ação.</p>
+            </div>
+        </div>
+
+        <div id="how-to-play-screen" class="screen hidden">
+            <h2>Como Jogar</h2>
+            <div class="instructions">
+                <p>DualWorld é um RPG de combate por turnos onde duas civilizações - uma mágica e outra tecnológica - lutam pela supremacia.</p>
+                <h3>Regras Básicas:</h3>
+                <ul>
+                    <li>Escolha sua civilização: Mágica ou Tecnológica</li>
+                    <li>Cada turno, você pode realizar uma ação: atacar, defender ou usar habilidade especial</li>
+                    <li>Cada civilização tem habilidades únicas com pontos fortes e fracos</li>
+                    <li>Derrote seu oponente reduzindo seus pontos de vida a zero</li>
+                </ul>
+            </div>
+            <button id="back-to-menu" class="btn">Voltar ao Menu</button>
+        </div>
+    </div>    <script src="js/effects.js"></script>
+    <script src="js/game.js" type="module"></script>
+</body>
+</html>

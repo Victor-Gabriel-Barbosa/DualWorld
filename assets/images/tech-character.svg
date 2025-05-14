@@ -1,0 +1,49 @@
+/* Arquivo SVG para personagem tecnológico */
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="200" viewBox="0 0 150 200">
+  <defs>
+    <linearGradient id="techArmor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00bfff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="techFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+  </defs>
+  
+  <!-- Aura tecnológica -->
+  <circle cx="75" cy="100" r="60" fill="none" stroke="#00bfff" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  
+  <!-- Corpo/Armadura -->
+  <rect x="60" y="50" width="30" height="80" rx="5" fill="url(#techArmor)"/>
+  
+  <!-- Detalhes da armadura -->
+  <line x1="60" y1="70" x2="90" y2="70" stroke="#0000cd" stroke-width="1"/>
+  <line x1="60" y1="90" x2="90" y2="90" stroke="#0000cd" stroke-width="1"/>
+  <line x1="60" y1="110" x2="90" y2="110" stroke="#0000cd" stroke-width="1"/>
+  
+  <!-- Capacete -->
+  <rect x="65" y="30" width="20" height="20" rx="10" fill="url(#techArmor)"/>
+  
+  <!-- Visor -->
+  <rect x="70" y="35" width="10" height="5" fill="#00008b"/>
+  <line x1="70" y1="35" x2="80" y2="35" stroke="#00bfff" stroke-width="1"/>
+  <line x1="70" y1="40" x2="80" y2="40" stroke="#00bfff" stroke-width="1"/>
+  
+  <!-- Arma -->
+  <rect x="35" y="80" width="25" height="8" rx="2" fill="#1e90ff"/>
+  <rect x="30" y="78" width="5" height="12" rx="1" fill="#1e90ff"/>
+  <circle cx="30" cy="84" r="3" fill="#00bfff" filter="url(#techFilter)"/>
+  
+  <!-- Braços -->
+  <rect x="90" y="60" width="20" height="5" rx="2" fill="url(#techArmor)"/>
+  <rect x="40" y="60" width="20" height="5" rx="2" fill="url(#techArmor)"/>
+  <rect x="40" y="65" width="5" height="20" rx="2" fill="url(#techArmor)"/>
+  
+  <!-- Pernas -->
+  <rect x="65" y="130" width="8" height="50" fill="url(#techArmor)"/>
+  <rect x="77" y="130" width="8" height="50" fill="url(#techArmor)"/>
+  
+  <!-- Detalhes tecnológicos -->
+  <circle cx="75" cy="50" r="2" fill="#00bfff" filter="url(#techFilter)"/>
+  <circle cx="75" cy="100" r="3" fill="#00bfff" filter="url(#techFilter)"/>
+</svg>

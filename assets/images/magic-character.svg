@@ -1,0 +1,40 @@
+/* Arquivo SVG para personagem mágico */
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="200" viewBox="0 0 150 200">
+  <defs>
+    <radialGradient id="magicAura" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:rgba(138,43,226,0.8);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(138,43,226,0);stop-opacity:1" />
+    </radialGradient>
+    <filter id="magicFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  
+  <!-- Aura mágica -->
+  <circle cx="75" cy="100" r="60" fill="url(#magicAura)" opacity="0.3"/>
+  
+  <!-- Corpo -->
+  <path d="M60,60 C60,46.7 67.8,36 77.5,36 C87.2,36 95,46.7 95,60 L95,130 C95,143.3 87.2,154 77.5,154 C67.8,154 60,143.3 60,130 Z" fill="#4b0082"/>
+  
+  <!-- Cabeça -->
+  <circle cx="77.5" cy="35" r="15" fill="#8a2be2"/>
+  
+  <!-- Olhos -->
+  <circle cx="72" cy="32" r="2" fill="white"/>
+  <circle cx="83" cy="32" r="2" fill="white"/>
+  
+  <!-- Cajado -->
+  <line x1="110" y1="60" x2="130" y2="20" stroke="#4b0082" stroke-width="3"/>
+  <circle cx="130" cy="20" r="8" fill="#a020f0" filter="url(#magicFilter)"/>
+  
+  <!-- Efeitos mágicos na mão -->
+  <g filter="url(#magicFilter)">
+    <circle cx="106" cy="64" r="5" fill="#a020f0" opacity="0.7"/>
+    <circle cx="112" cy="59" r="3" fill="#a020f0" opacity="0.5"/>
+    <circle cx="109" cy="56" r="2" fill="#a020f0" opacity="0.6"/>
+  </g>
+  
+  <!-- Pernas -->
+  <path d="M60,130 L50,180 L70,180 Z" fill="#4b0082"/>
+  <path d="M95,130 L105,180 L85,180 Z" fill="#4b0082"/>
+</svg>
